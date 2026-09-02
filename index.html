@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cases de Growth &amp; Performance de Zan Farias — máquinas de aquisição, funis de conversão e jornada do cliente em 7 empresas.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230E4B57'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%232FA8BD' font-family='Georgia,serif'%3EZ%3C/text%3E%3C/svg%3E">
+<title>Zan Farias — Cases de Growth</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+  :root{
+    --bg:#F1F6F7;
+    --surface:#FFFFFF;
+    --surface-2:#E5EEEF;
+    --line:#CBDBDD;
+    --ink:#0B2E36;
+    --muted:#4C6B72;
+    --petrol:#0E4B57;
+    --petrol-deep:#073239;
+    --petrol-soft:#DCEAEC;
+    --accent:#C97A3D;
+    --accent-soft:#F5E6D8;
+    --shadow: 0 1px 2px rgba(7,50,57,0.05), 0 10px 26px rgba(7,50,57,0.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#06181C;
+      --surface:#0C2830;
+      --surface-2:#0F323B;
+      --line:#1E4750;
+      --ink:#E7F3F5;
+      --muted:#8FB2B9;
+      --petrol:#3BC0D6;
+      --petrol-deep:#0A3C46;
+      --petrol-soft:rgba(59,192,214,0.13);
+      --accent:#E39A61;
+      --accent-soft:rgba(227,154,97,0.14);
+      --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 12px 30px rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#06181C;
+    --surface:#0C2830;
+    --surface-2:#0F323B;
+    --line:#1E4750;
+    --ink:#E7F3F5;
+    --muted:#8FB2B9;
+    --petrol:#3BC0D6;
+    --petrol-deep:#0A3C46;
+    --petrol-soft:rgba(59,192,214,0.13);
+    --accent:#E39A61;
+    --accent-soft:rgba(227,154,97,0.14);
+    --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 12px 30px rgba(0,0,0,0.4);
+  }
+
+  *{box-sizing:border-box;}
+  html{background:var(--bg);}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:960px; margin:0 auto; padding:0 24px; }
+  a{ color:inherit; }
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--petrol); outline-offset:3px; border-radius:2px; }
+
+  /* topbar */
+  .topbar{ padding:26px 0 0; }
+  .topbar .wrap{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .brand{ font-weight:700; font-size:14px; letter-spacing:.04em; text-transform:uppercase; color:var(--petrol); }
+  .brand span{ color:var(--muted); font-weight:500; }
+  .topbar .loc{ font-size:12px; color:var(--muted); font-weight:500; letter-spacing:.03em; }
+
+  /* hero */
+  .hero{ padding:60px 0 24px; position:relative; overflow:hidden; }
+  .hero-bg{ position:absolute; inset:0; z-index:-1; opacity:.5; pointer-events:none; }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:12px;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--petrol); margin-bottom:16px;
+  }
+  .eyebrow::before{ content:""; width:8px; height:8px; border-radius:2px; background:var(--accent); transform:rotate(45deg); }
+  h1{
+    font-size:clamp(30px,4.6vw,44px); line-height:1.14; letter-spacing:-0.01em; margin:0 0 18px;
+    text-wrap:balance; font-weight:800;
+  }
+  h1 em{ color:var(--petrol); font-style:normal; }
+  .lede{ font-size:16.5px; line-height:1.7; color:var(--muted); max-width:62ch; margin:0 0 30px; font-weight:500; }
+
+  .stat-strip{
+    display:flex; flex-wrap:wrap; gap:0; border:1px solid var(--line); border-radius:14px;
+    background:var(--surface); box-shadow:var(--shadow); overflow:hidden; margin-bottom:8px;
+  }
+  .stat-strip .s{ flex:1 1 150px; padding:18px 20px; border-left:1px solid var(--line); }
+  .stat-strip .s:first-child{ border-left:none; }
+  .stat-strip .s .num{ font-size:26px; font-weight:800; color:var(--petrol); letter-spacing:-0.01em; }
+  .stat-strip .s .lbl{ font-size:12.5px; color:var(--muted); margin-top:3px; font-weight:500; }
+
+  section.block{ padding:52px 0; }
+  .kicker{ font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 0 12px; }
+  h2{ font-size:clamp(21px,2.8vw,27px); line-height:1.28; margin:0 0 14px; text-wrap:balance; font-weight:800; }
+  .intro p{ font-size:15.5px; line-height:1.75; color:var(--muted); max-width:66ch; font-weight:500; }
+  .intro p + p{ margin-top:14px; }
+
+  /* cases */
+  .cases{ display:flex; flex-direction:column; gap:18px; }
+  .case{ border:1px solid var(--line); background:var(--surface); border-radius:16px; padding:28px 30px 30px; box-shadow:var(--shadow); }
+  .case-head{ display:flex; align-items:center; gap:16px; margin-bottom:10px; }
+  .logo{ flex:none; width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:var(--petrol-soft); color:var(--petrol); }
+  .logo svg{ width:24px; height:24px; }
+  .case-head-text{ display:flex; flex-direction:column; gap:5px; min-width:0; }
+  .tag{
+    font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    padding:4px 10px; border-radius:999px; white-space:nowrap; align-self:flex-start;
+    color:var(--petrol); background:var(--petrol-soft);
+  }
+  .case h3{ font-size:19px; margin:0; font-weight:800; }
+  .case .ctx{ font-size:14.5px; line-height:1.65; color:var(--muted); max-width:64ch; margin:0 0 20px; font-weight:500; }
+
+  .flow{ display:flex; flex-direction:column; gap:8px; margin-bottom:22px; }
+  .flow-row{ display:flex; flex-wrap:wrap; align-items:center; gap:0 8px; font-size:12.5px; font-weight:600; color:var(--muted); }
+  .flow-row .flabel{ font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); width:78px; flex:none; }
+  .flow-row .step{ padding:6px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface-2); color:var(--ink); white-space:nowrap; margin:3px 0; }
+  .flow-row .arrow{ color:var(--muted); }
+
+  .numbers{ display:flex; flex-wrap:wrap; gap:10px; border-top:1px solid var(--line); padding-top:18px; }
+  .numbers .n{ flex:1 1 150px; border:1px solid var(--line); border-radius:10px; background:var(--surface-2); padding:14px 16px; }
+  .numbers .n .num{ font-size:22px; font-weight:800; color:var(--ink); letter-spacing:-0.01em; }
+  .numbers .n .cap{ font-size:12px; color:var(--muted); margin-top:4px; line-height:1.45; font-weight:500; }
+  .numbers .n .star{ color:var(--accent); }
+
+  .note{ font-size:12.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:18px; margin-top:6px; font-weight:500; }
+
+  .bridge{ border:1px solid var(--line); border-radius:16px; background:var(--surface-2); padding:34px 32px; box-shadow:var(--shadow); }
+  .bridge p{ font-size:15.5px; line-height:1.75; margin:0 0 14px; max-width:66ch; font-weight:500; }
+  .bridge p:last-child{ margin-bottom:0; }
+  .bridge strong{ color:var(--petrol); }
+
+  footer{ padding:44px 0 68px; }
+  .contact{ display:flex; flex-wrap:wrap; gap:10px 26px; margin-top:18px; font-size:13px; font-weight:600; }
+  .contact a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:1px; }
+  .contact a:hover, .contact a:focus-visible{ border-color:var(--petrol); color:var(--petrol); }
+  .signoff{ color:var(--muted); font-size:13px; margin-top:24px; font-weight:500; }
+
+  @media (max-width:420px){ .case-head{ flex-wrap:wrap; } .flow-row .flabel{ width:auto; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">ZAN FARIAS <span>· GROWTH &amp; PERFORMANCE</span></div>
+    <div class="loc">GOIÂNIA · GO</div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">cases selecionados</div>
+    <h1>Máquinas de aquisição que levam o cliente do <em>primeiro clique</em> à recompra.</h1>
+    <p class="lede">Mais de 10 anos construindo funil de conversão, mídia paga de alta performance e jornada de cliente completa — em setores tão diferentes quanto moda, educação, estética B2B, aviação e tecnologia. Sete empresas, sete máquinas de aquisição desenhadas do zero.</p>
+
+    <div class="stat-strip">
+      <div class="s"><div class="num">7</div><div class="lbl">setores diferentes</div></div>
+      <div class="s"><div class="num">10+</div><div class="lbl">anos de growth &amp; performance</div></div>
+      <div class="s"><div class="num">+150%*</div><div class="lbl">crescimento médio de aquisição paga</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="block intro">
+  <div class="wrap">
+    <p class="kicker">como eu penso a máquina</p>
+    <h2>Canal pago é só a ponta. A máquina é a jornada inteira.</h2>
+    <p>Em cada empresa abaixo, o trabalho não termina no clique. Ele começa ali — e segue por qualificação, conversão, ativação e recompra, com o canal certo em cada etapa e a métrica certa medindo cada uma delas.</p>
+    <p>Uma marca de moda recompra por coleção; uma pós-graduação recompra por indicação; um médico credenciado recompra por consumo recorrente de insumo. A seguir, sete desenhos diferentes da mesma disciplina.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="kicker">cases</p>
+    <div class="cases">
+
+      <article class="case">
+        <div class="case-head">
+          <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a2 2 0 1 1 2 2"/><path d="M12 5v3"/><path d="M12 8 3 15a2 2 0 0 0 1.2 3.6h15.6A2 2 0 0 0 21 15L12 8Z"/></svg></span>
+          <div class="case-head-text">
+            <span class="tag">Moda · Vestuário</span>
+            <h3>Grupo MPL</h3>
+          </div>
+        </div>
+        <p class="ctx">Grupo goianiense com mais de 30 anos e duas marcas próprias — M.POLLO (moda sofisticada) e PACO Jeans (público jovem) — cada uma com público e criativo distintos, disputando o mesmo orçamento de mídia.</p>
+        <div class="flow">
+          <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta Ads segmentado por marca</span><span class="arrow">→</span><span class="step">Vitrine digital / loja virtual</span></div>
+          <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Carrinho</span><span class="arrow">→</span><span class="step">Compra</span><span class="arrow">→</span><span class="step">Clube de vantagens</span><span class="arrow">→</span><span class="step">Recompra na próxima coleção</span></div>
+        </div>
+        <div class="numbers">
+          <div class="n"><div class="num">+118%<span class="star">*</span></div><div class="cap">tráfego pago qualificado (2 marcas) em 12 meses</div></div>
+          <div class="n"><div class="num">R$ 5,20<span class="star">*</span></div><div class="cap">CPA médio</div></div>
+          <div class="n"><div class="num">31%<span class="star">*</span></div><div class="cap">taxa de recompra em 90 dias</div></div>
+          <div class="n"><div class="num">2</div><div class="cap">marcas com funil segmentado rodando em paralelo, real</div></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2 9l10 5 10-5-10-5Z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg></span>
+          <div class="case-head-text">
+            <span class="tag">Educação · Pós-graduação</span>
+            <h3>Ipog</h3>
+          </div>
+        </div>
+        <p class="ctx">Instituição de pós-graduação com cursos presenciais e EAD. Ciclo de decisão mais longo, muitos cursos e áreas concorrendo pelo mesmo budget de mídia.</p>
+        <div class="flow">
+          <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Conteúdo + Ads por área de curso</span><span class="arrow">→</span><span class="step">Lead magnet (e-book/webinar)</span></div>
+          <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Consultor educacional</span><span class="arrow">→</span><span class="step">Matrícula</span><span class="arrow">→</span><span class="step">Recompra (nova pós/indicação)</span></div>
+        </div>
+        <div class="numbers">
+          <div class="n"><div class="num">2.400<span class="star">*</span></div><div class="cap">leads qualificados por mês</div></div>
+          <div class="n"><div class="num">-28%<span class="star">*</span></div><div class="cap">custo por matrícula em 12 meses</div></div>
+          <div class="n"><div class="num">18%<span class="star">*</span></div><div class="cap">conversão lead → matrícula</div></div>
+          <div class="n"><div class="num">22%<span class="star">*</span></div><div class="cap">dos alunos fazem uma 2ª pós (recompra)</div></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 4 6v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6l-2-4"/><path d="M4 6h16"/><path d="M9 10a3 3 0 0 0 6 0"/></svg></span>
+          <div class="case-head-text">
+            <span class="tag">Moda · Shopping Center</span>
+            <h3>Mega Moda Shopping</h3>
+          </div>
+        </div>
+        <p class="ctx">Shopping de moda com lojistas multimarcas migrando para um marketplace próprio (VTex). Precisava de um checkout único puxando tráfego pra dentro do centro físico e do digital ao mesmo tempo.</p>
+        <div class="flow">
+          <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Social ads por coleção/sazonalidade</span><span class="arrow">→</span><span class="step">Marketplace (VTex)</span></div>
+          <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Checkout unificado</span><span class="arrow">→</span><span class="step">Cashback</span><span class="arrow">→</span><span class="step">Recompra na próxima coleção</span></div>
+        </div>
+        <div class="numbers">
+          <div class="n"><div class="num">+187%<span class="star">*</span></div><div class="cap">GMV do marketplace em 18 meses</div></div>
+          <div class="n"><div class="num">41 mil<span class="star">*</span></div><div class="cap">pedidos/mês no pico de coleção</div></div>
+          <div class="n"><div class="num">R$ 3,80<span class="star">*</span></div><div class="cap">CPA médio</div></div>
+          <div class="n"><div class="num">29%<span class="star">*</span></div><div class="cap">recompra em 60 dias</div></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4-2.5-8-6-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 5-4 8.5-8 11Z"/><path d="M12 6v11"/></svg></span>
+          <div class="case-head-text">
+            <span class="tag">Estética Avançada · B2B</span>
+            <h3>Rennova</h3>
+          </div>
+        </div>
+        <p class="ctx">Produtos estéticos injetáveis (ácido hialurônico, toxina botulínica, ácido poli-L-lático) vendidos exclusivamente a profissionais credenciados com CRM/CRO. O cliente é o médico, não o paciente — CRM (Salesforce) implementado pra parar de perder credenciamento no meio do funil.</p>
+        <div class="flow">
+          <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta + LinkedIn Ads por especialidade médica</span><span class="arrow">→</span><span class="step">Cadastro profissional</span></div>
+          <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Validação CRM/CRO</span><span class="arrow">→</span><span class="step">Primeiro pedido</span><span class="arrow">→</span><span class="step">Recompra recorrente de insumo</span></div>
+        </div>
+        <div class="numbers">
+          <div class="n"><div class="num">+96%<span class="star">*</span></div><div class="cap">leads de profissionais credenciados em 12 meses</div></div>
+          <div class="n"><div class="num">73%<span class="star">*</span></div><div class="cap">taxa de validação de credencial (CRM/CRO)</div></div>
+          <div class="n"><div class="num">R$ 42<span class="star">*</span></div><div class="cap">custo por profissional credenciado</div></div>
+          <div class="n"><div class="num">61%<span class="star">*</span></div><div class="cap">recompra recorrente de insumo</div></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span>
+          <div class="case-head-text">
+            <span class="tag">SaaS B2B · Produto próprio</span>
+            <h3>Trax Marketing</h3>
+          </div>
+        </div>
+        <p class="ctx">Hub de soluções de marketing e vendas com plataforma SaaS B2B própria, fundado e liderado por mim. Autoridade pessoal como topo de funil, consultoria como entrada, plataforma como recorrência.</p>
+        <div class="flow">
+          <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Conteúdo + autoridade (LinkedIn)</span><span class="arrow">→</span><span class="step">Diagnóstico gratuito</span></div>
+          <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Consultoria pontual</span><span class="arrow">→</span><span class="step">Ativação na plataforma</span><span class="arrow">→</span><span class="step">Renovação (recompra)</span></div>
+        </div>
+        <div class="numbers">
+          <div class="n"><div class="num">+210%<span class="star">*</span></div><div class="cap">crescimento de MRR em 12 meses</div></div>
+          <div class="n"><div class="num">38<span class="star">*</span></div><div class="cap">clientes ativos na base</div></div>
+          <div class="n"><div class="num">76<span class="star">*</span></div><div class="cap">NPS entre clientes ativos</div></div>
+          <div class="n"><div class="num">64%<span class="star">*</span></div><div class="cap">taxa de renovação anual</div></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16.5 10 12l3 3 9-7"/><path d="M14.5 8H22v7.5"/></svg></span>
+          <div class="case-head-text">
+            <span class="tag">Aeronáutico · Educação Técnica</span>
+            <h3>Sky Escola de Aeronáutica</h3>
+          </div>
+        </div>
+        <p class="ctx">Escola de formação técnica em aviação. Estruturação de marketing do zero: da geração de lead qualificado até a matrícula em curso técnico de alto ticket.</p>
+        <div class="flow">
+          <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta + Google Ads por curso técnico</span><span class="arrow">→</span><span class="step">Simulador de carreira</span></div>
+          <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Consultoria de matrícula</span><span class="arrow">→</span><span class="step">Turma</span><span class="arrow">→</span><span class="step">Especialização (recompra)</span></div>
+        </div>
+        <div class="numbers">
+          <div class="n"><div class="num">+134%<span class="star">*</span></div><div class="cap">leads qualificados em 12 meses</div></div>
+          <div class="n"><div class="num">-31%<span class="star">*</span></div><div class="cap">custo por matrícula</div></div>
+          <div class="n"><div class="num">R$ 58<span class="star">*</span></div><div class="cap">custo por lead</div></div>
+          <div class="n"><div class="num">19%<span class="star">*</span></div><div class="cap">dos egressos fazem especialização</div></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span>
+          <div class="case-head-text">
+            <span class="tag">Tecnologia Contábil · SaaS B2B</span>
+            <h3>Tron Sistemas</h3>
+          </div>
+        </div>
+        <p class="ctx">Software de gestão pra escritórios de contabilidade. Funil de vendas e mídia paga desenhado pra vender módulo por módulo, não só o sistema como um todo.</p>
+        <div class="flow">
+          <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta + Google Ads por dor operacional</span><span class="arrow">→</span><span class="step">Lead nativo</span></div>
+          <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Demonstração comercial</span><span class="arrow">→</span><span class="step">Onboarding</span><span class="arrow">→</span><span class="step">Módulo extra (recompra)</span></div>
+        </div>
+        <div class="numbers">
+          <div class="n"><div class="num">+176%<span class="star">*</span></div><div class="cap">leads qualificados via mídia paga em 12 meses</div></div>
+          <div class="n"><div class="num">R$ 68<span class="star">*</span></div><div class="cap">custo por lead médio</div></div>
+          <div class="n"><div class="num">41%<span class="star">*</span></div><div class="cap">conversão lead → demonstração</div></div>
+          <div class="n"><div class="num">58%<span class="star">*</span></div><div class="cap">adicionam módulo extra no 1º ano</div></div>
+        </div>
+      </article>
+
+    </div>
+    <p class="note"><span class="star">*</span> números ilustrativos, usados para representar a metodologia e a ordem de grandeza do trabalho de growth &amp; performance em cada setor.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="bridge">
+      <p class="kicker" style="margin-bottom:16px;">o que muda entre um setor e outro</p>
+      <p>O canal muda, o criativo muda, o ciclo de decisão muda — de um clique por impulso numa coleção de moda a um contrato de curso técnico. O que não muda é o método: mapear a jornada real antes de ligar qualquer anúncio, medir cada etapa do funil, e desenhar a recompra como parte da máquina, não como sorte.</p>
+      <p>Se o seu negócio ainda trata aquisição e retenção como coisas separadas, <strong>é aí que a máquina para de rodar.</strong></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="kicker">contato</p>
+    <div class="contact">
+      <a href="tel:+5562995778889">(62) 99577-8889</a>
+      <a href="mailto:zanhis@outlook.com">zanhis@outlook.com</a>
+      <a href="https://instagram.com/zan.farias">instagram.com/zan.farias</a>
+      <a href="https://linkedin.com/in/zanfarias">linkedin.com/in/zanfarias</a>
+      <a href="https://behance.net/zanhissilva">behance.net/zanhissilva</a>
+    </div>
+    <p class="signoff">Zan Farias — Growth &amp; Performance · Fundador &amp; CEO da Trax · Sócio-fundador do GestOdonto</p>
+  </div>
+</footer>
+
+</body>
+</html>
