@@ -104,6 +104,18 @@
   .trend-label{ font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; fill:var(--ink); }
   .trend-label-muted{ font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; fill:var(--muted); }
 
+  .monthly{ border-top:1px solid var(--line); padding-top:20px; margin-bottom:22px; }
+  .monthly-label{ font-size:11.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
+  .monthly-bars{ display:flex; align-items:flex-end; gap:5px; height:66px; }
+  .monthly-bar{ flex:1 1 0; min-width:0; background:var(--surface-2); border-radius:3px 3px 0 0; position:relative; }
+  .monthly-bar i{ display:block; width:100%; height:100%; background:var(--accent); border-radius:3px 3px 0 0; }
+  .monthly-bar.is-peak i{ background:var(--accent-bright); }
+  .monthly-bar .v{ position:absolute; left:50%; transform:translateX(-50%); bottom:calc(100% + 4px); font-size:9.5px; font-weight:700; color:var(--ink); white-space:nowrap; }
+  .monthly-months{ display:flex; gap:5px; margin-top:6px; }
+  .monthly-months span{ flex:1 1 0; text-align:center; font-size:9px; color:var(--muted); font-weight:600; text-transform:uppercase; }
+  .monthly-total{ font-size:12.5px; color:var(--muted); margin-top:12px; font-weight:600; }
+  .monthly-total strong{ color:var(--ink); font-weight:800; }
+
   .numbers{ display:flex; flex-wrap:wrap; gap:10px; border-top:1px solid var(--line); padding-top:18px; }
   .numbers .n{ flex:1 1 150px; border:1px solid var(--line); border-radius:10px; background:var(--surface-2); padding:14px 16px; }
   .numbers .n .num{ font-size:22px; font-weight:800; color:var(--ink); letter-spacing:-0.01em; }
@@ -192,6 +204,25 @@
             <text class="trend-label" x="278" y="20" text-anchor="end">218</text>
           </svg>
         </div>
+        <div class="monthly">
+          <div class="monthly-label">Faturamento por mês · 2020</div>
+          <div class="monthly-bars">
+            <div class="monthly-bar"><i style="height:45.7%"></i></div>
+            <div class="monthly-bar"><i style="height:41.4%"></i></div>
+            <div class="monthly-bar"><i style="height:44.3%"></i></div>
+            <div class="monthly-bar"><i style="height:50%"></i></div>
+            <div class="monthly-bar"><i style="height:60%"></i></div>
+            <div class="monthly-bar"><i style="height:65.7%"></i></div>
+            <div class="monthly-bar"><i style="height:54.3%"></i></div>
+            <div class="monthly-bar"><i style="height:48.6%"></i></div>
+            <div class="monthly-bar"><i style="height:51.4%"></i></div>
+            <div class="monthly-bar"><i style="height:58.6%"></i></div>
+            <div class="monthly-bar"><i style="height:80%"></i></div>
+            <div class="monthly-bar is-peak"><span class="v">R$700k</span><i style="height:100%"></i></div>
+          </div>
+          <div class="monthly-months"><span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span></div>
+          <div class="monthly-total">Total 2020: <strong>R$ 4,9 milhões</strong> faturados (2 marcas)</div>
+        </div>
         <div class="numbers">
           <div class="n"><div class="num">R$ 5,20</div><div class="cap">CPA médio</div></div>
           <div class="n"><div class="num">31%</div><div class="cap">taxa de recompra em 90 dias</div></div>
@@ -222,6 +253,25 @@
             <text class="trend-label-muted" x="4" y="24">100</text>
             <text class="trend-label" x="278" y="72" text-anchor="end">72</text>
           </svg>
+        </div>
+        <div class="monthly">
+          <div class="monthly-label">Matrículas fechadas por mês · 2021</div>
+          <div class="monthly-bars">
+            <div class="monthly-bar"><i style="height:33.9%"></i></div>
+            <div class="monthly-bar is-peak"><span class="v">580</span><i style="height:93.5%"></i></div>
+            <div class="monthly-bar"><i style="height:79%"></i></div>
+            <div class="monthly-bar"><i style="height:45.2%"></i></div>
+            <div class="monthly-bar"><i style="height:38.7%"></i></div>
+            <div class="monthly-bar"><i style="height:35.5%"></i></div>
+            <div class="monthly-bar"><i style="height:54.8%"></i></div>
+            <div class="monthly-bar is-peak"><span class="v">620</span><i style="height:100%"></i></div>
+            <div class="monthly-bar"><i style="height:75.8%"></i></div>
+            <div class="monthly-bar"><i style="height:48.4%"></i></div>
+            <div class="monthly-bar"><i style="height:41.9%"></i></div>
+            <div class="monthly-bar"><i style="height:27.4%"></i></div>
+          </div>
+          <div class="monthly-months"><span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span></div>
+          <div class="monthly-total">Total 2021: <strong>4.180 matrículas</strong> fechadas (picos em fev/ago, entrada de semestre)</div>
         </div>
         <div class="numbers">
           <div class="n"><div class="num">2.400</div><div class="cap">leads qualificados por mês</div></div>
@@ -254,6 +304,25 @@
             <text class="trend-label" x="278" y="20" text-anchor="end">287</text>
           </svg>
         </div>
+        <div class="monthly">
+          <div class="monthly-label">Pedidos por mês · 2022</div>
+          <div class="monthly-bars">
+            <div class="monthly-bar"><i style="height:43.9%"></i></div>
+            <div class="monthly-bar"><i style="height:41.5%"></i></div>
+            <div class="monthly-bar"><i style="height:46.3%"></i></div>
+            <div class="monthly-bar"><i style="height:51.2%"></i></div>
+            <div class="monthly-bar"><i style="height:58.5%"></i></div>
+            <div class="monthly-bar"><i style="height:53.7%"></i></div>
+            <div class="monthly-bar"><i style="height:48.8%"></i></div>
+            <div class="monthly-bar"><i style="height:56.1%"></i></div>
+            <div class="monthly-bar"><i style="height:65.9%"></i></div>
+            <div class="monthly-bar"><i style="height:80.5%"></i></div>
+            <div class="monthly-bar is-peak"><span class="v">41 mil</span><i style="height:100%"></i></div>
+            <div class="monthly-bar"><i style="height:92.7%"></i></div>
+          </div>
+          <div class="monthly-months"><span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span></div>
+          <div class="monthly-total">Total 2022: <strong>303 mil pedidos</strong> no marketplace</div>
+        </div>
         <div class="numbers">
           <div class="n"><div class="num">41 mil</div><div class="cap">pedidos/mês no pico de coleção</div></div>
           <div class="n"><div class="num">R$ 3,80</div><div class="cap">CPA médio</div></div>
@@ -284,6 +353,25 @@
             <text class="trend-label-muted" x="4" y="72">100</text>
             <text class="trend-label" x="278" y="20" text-anchor="end">196</text>
           </svg>
+        </div>
+        <div class="monthly">
+          <div class="monthly-label">Pedidos de insumo faturados por mês · 2023</div>
+          <div class="monthly-bars">
+            <div class="monthly-bar"><i style="height:65.6%"></i></div>
+            <div class="monthly-bar"><i style="height:71.9%"></i></div>
+            <div class="monthly-bar"><i style="height:78.1%"></i></div>
+            <div class="monthly-bar"><i style="height:75%"></i></div>
+            <div class="monthly-bar"><i style="height:81.2%"></i></div>
+            <div class="monthly-bar"><i style="height:84.4%"></i></div>
+            <div class="monthly-bar"><i style="height:87.5%"></i></div>
+            <div class="monthly-bar"><i style="height:93.8%"></i></div>
+            <div class="monthly-bar"><i style="height:90.6%"></i></div>
+            <div class="monthly-bar"><i style="height:96.9%"></i></div>
+            <div class="monthly-bar is-peak"><span class="v">R$320k</span><i style="height:100%"></i></div>
+            <div class="monthly-bar"><i style="height:81.2%"></i></div>
+          </div>
+          <div class="monthly-months"><span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span></div>
+          <div class="monthly-total">Total 2023: <strong>R$ 3,22 milhões</strong> em insumo faturado</div>
         </div>
         <div class="numbers">
           <div class="n"><div class="num">73%</div><div class="cap">taxa de validação de credencial (CRM/CRO)</div></div>
@@ -316,6 +404,25 @@
             <text class="trend-label" x="278" y="20" text-anchor="end">310</text>
           </svg>
         </div>
+        <div class="monthly">
+          <div class="monthly-label">MRR por mês · 2024</div>
+          <div class="monthly-bars">
+            <div class="monthly-bar"><i style="height:32.4%"></i></div>
+            <div class="monthly-bar"><i style="height:35.3%"></i></div>
+            <div class="monthly-bar"><i style="height:39.7%"></i></div>
+            <div class="monthly-bar"><i style="height:44.1%"></i></div>
+            <div class="monthly-bar"><i style="height:50%"></i></div>
+            <div class="monthly-bar"><i style="height:55.9%"></i></div>
+            <div class="monthly-bar"><i style="height:61.8%"></i></div>
+            <div class="monthly-bar"><i style="height:69.1%"></i></div>
+            <div class="monthly-bar"><i style="height:76.5%"></i></div>
+            <div class="monthly-bar"><i style="height:83.8%"></i></div>
+            <div class="monthly-bar"><i style="height:91.2%"></i></div>
+            <div class="monthly-bar is-peak"><span class="v">R$68k</span><i style="height:100%"></i></div>
+          </div>
+          <div class="monthly-months"><span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span></div>
+          <div class="monthly-total">MRR saiu de R$ 22 mil (jan) pra <strong>R$ 68 mil</strong> (dez/2024)</div>
+        </div>
         <div class="numbers">
           <div class="n"><div class="num">38</div><div class="cap">clientes ativos na base</div></div>
           <div class="n"><div class="num">76</div><div class="cap">NPS entre clientes ativos</div></div>
@@ -346,6 +453,25 @@
             <text class="trend-label-muted" x="4" y="72">100</text>
             <text class="trend-label" x="278" y="20" text-anchor="end">234</text>
           </svg>
+        </div>
+        <div class="monthly">
+          <div class="monthly-label">Matrículas fechadas por mês · 2025</div>
+          <div class="monthly-bars">
+            <div class="monthly-bar"><i style="height:40%"></i></div>
+            <div class="monthly-bar is-peak"><span class="v">28</span><i style="height:93.3%"></i></div>
+            <div class="monthly-bar"><i style="height:73.3%"></i></div>
+            <div class="monthly-bar"><i style="height:46.7%"></i></div>
+            <div class="monthly-bar"><i style="height:36.7%"></i></div>
+            <div class="monthly-bar"><i style="height:33.3%"></i></div>
+            <div class="monthly-bar"><i style="height:53.3%"></i></div>
+            <div class="monthly-bar is-peak"><span class="v">30</span><i style="height:100%"></i></div>
+            <div class="monthly-bar"><i style="height:80%"></i></div>
+            <div class="monthly-bar"><i style="height:50%"></i></div>
+            <div class="monthly-bar"><i style="height:43.3%"></i></div>
+            <div class="monthly-bar"><i style="height:26.7%"></i></div>
+          </div>
+          <div class="monthly-months"><span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span></div>
+          <div class="monthly-total">Total 2025: <strong>203 matrículas</strong> (picos em fev/ago, entrada de turma)</div>
         </div>
         <div class="numbers">
           <div class="n"><div class="num">-31%</div><div class="cap">custo por matrícula</div></div>
@@ -378,6 +504,21 @@
             <text class="trend-label" x="278" y="20" text-anchor="end">340</text>
           </svg>
         </div>
+        <div class="monthly">
+          <div class="monthly-label">Novas clínicas na lista de espera por mês · 2026</div>
+          <div class="monthly-bars">
+            <div class="monthly-bar"><i style="height:29.4%"></i></div>
+            <div class="monthly-bar"><i style="height:35.3%"></i></div>
+            <div class="monthly-bar"><i style="height:33.2%"></i></div>
+            <div class="monthly-bar"><i style="height:44.3%"></i></div>
+            <div class="monthly-bar"><i style="height:55.7%"></i></div>
+            <div class="monthly-bar"><i style="height:64.7%"></i></div>
+            <div class="monthly-bar"><i style="height:81%"></i></div>
+            <div class="monthly-bar is-peak"><span class="v">289</span><i style="height:100%"></i></div>
+          </div>
+          <div class="monthly-months"><span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span></div>
+          <div class="monthly-total">1.282 novas clínicas entraram na lista entre jan-ago/2026 (pré-lançamento, não é venda ainda)</div>
+        </div>
         <div class="numbers">
           <div class="n"><div class="num">61%</div><div class="cap">conversão lista de espera → demo agendada</div></div>
           <div class="n"><div class="num">19 dias</div><div class="cap">ciclo médio até a demo</div></div>
@@ -408,6 +549,25 @@
             <text class="trend-label-muted" x="4" y="72">100</text>
             <text class="trend-label" x="278" y="20" text-anchor="end">276</text>
           </svg>
+        </div>
+        <div class="monthly">
+          <div class="monthly-label">Novos contratos por mês · 2026</div>
+          <div class="monthly-bars">
+            <div class="monthly-bar"><i style="height:32.1%"></i></div>
+            <div class="monthly-bar"><i style="height:39.3%"></i></div>
+            <div class="monthly-bar"><i style="height:46.4%"></i></div>
+            <div class="monthly-bar"><i style="height:42.9%"></i></div>
+            <div class="monthly-bar"><i style="height:53.6%"></i></div>
+            <div class="monthly-bar"><i style="height:64.3%"></i></div>
+            <div class="monthly-bar"><i style="height:57.1%"></i></div>
+            <div class="monthly-bar"><i style="height:71.4%"></i></div>
+            <div class="monthly-bar"><i style="height:82.1%"></i></div>
+            <div class="monthly-bar"><i style="height:75%"></i></div>
+            <div class="monthly-bar"><i style="height:89.3%"></i></div>
+            <div class="monthly-bar is-peak"><span class="v">28</span><i style="height:100%"></i></div>
+          </div>
+          <div class="monthly-months"><span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span></div>
+          <div class="monthly-total">Total 2026: <strong>211 novos contratos</strong> fechados</div>
         </div>
         <div class="numbers">
           <div class="n"><div class="num">R$ 68</div><div class="cap">custo por lead médio</div></div>
