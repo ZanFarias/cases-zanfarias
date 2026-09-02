@@ -109,6 +109,17 @@
   .numbers .n .num{ font-size:22px; font-weight:800; color:var(--ink); letter-spacing:-0.01em; }
   .numbers .n .cap{ font-size:12px; color:var(--muted); margin-top:4px; line-height:1.45; font-weight:500; }
 
+  .case--proposal{ border-color:var(--accent); box-shadow:0 0 0 1px var(--accent-soft), var(--shadow); }
+  .steps{ list-style:none; margin:0 0 22px; padding:0; display:flex; flex-direction:column; gap:16px; }
+  .steps li{ display:flex; gap:14px; align-items:flex-start; }
+  .step-num{ flex:none; width:30px; height:30px; border-radius:50%; background:var(--accent-soft); color:var(--accent-bright); font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center; }
+  .step-body strong{ display:block; font-size:14.5px; margin-bottom:3px; color:var(--ink); }
+  .step-body p{ margin:0; font-size:13.5px; color:var(--muted); line-height:1.6; font-weight:500; }
+  .metrics-track{ border-top:1px solid var(--line); padding-top:18px; }
+  .metrics-track .mt-label{ font-size:11.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .metric-pills{ display:flex; flex-wrap:wrap; gap:8px; }
+  .metric-pill{ font-size:12px; font-weight:600; padding:6px 12px; border:1px solid var(--line); border-radius:999px; background:var(--surface-2); color:var(--ink); }
+
   .bridge{ border:1px solid var(--line); border-radius:16px; background:var(--surface-2); padding:34px 32px; box-shadow:var(--shadow); }
   .bridge p{ font-size:15.5px; line-height:1.75; margin:0 0 14px; max-width:66ch; font-weight:500; }
   .bridge p:last-child{ margin-bottom:0; }
@@ -406,6 +417,45 @@
       </article>
 
     </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="kicker">proposta</p>
+    <h2>Growth para a Garuda Medical, passo a passo</h2>
+    <p class="ctx" style="max-width:66ch;color:var(--muted);font-size:15px;line-height:1.7;margin:0 0 24px;">A Garuda mantém em funcionamento os equipamentos mais caros e mais críticos de um hospital — ressonância magnética (1.5T e 3.0T, todas as marcas), tomografia e os sistemas criogênicos/auxiliares em volta deles. É venda técnica, de ciclo longo, decidida por engenharia clínica e diretoria administrativa, não por impulso. É esse o funil que eu desenharia:</p>
+
+    <article class="case case--proposal">
+      <div class="case-head">
+        <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.6-.6-.6-2.6Z"/></svg></span>
+        <div class="case-head-text">
+          <span class="tag">Saúde · Manutenção de Equipamento Médico</span>
+          <h3>Garuda Medical</h3>
+        </div>
+      </div>
+      <p class="ctx">Manutenção preventiva agendada e corretiva emergencial 24/7 para RM, TC e sistemas criogênicos, com peças originais e equipe técnica com mais de 20 anos de segmento. O produto já é forte — falta a máquina de aquisição em volta dele.</p>
+
+      <ol class="steps">
+        <li><span class="step-num">1</span><div class="step-body"><strong>Mapear o ICP e o comprador real</strong><p>Hospitais e clínicas com RM/TC instalados, segmentados por marca e idade do parque de equipamento (quanto mais velho, maior a necessidade de manutenção). O contrato não é assinado pelo médico — é assinado pela engenharia clínica e pela diretoria administrativa. O funil precisa falar com os dois.</p></div></li>
+        <li><span class="step-num">2</span><div class="step-body"><strong>Conteúdo técnico como porta de entrada</strong><p>Calculadora de custo de parada (downtime) de uma RM, conteúdo sobre manutenção preventiva de equipamentos de imagem, casos técnicos reais — pra virar referência antes do hospital precisar de um reparo emergencial, não durante a emergência.</p></div></li>
+        <li><span class="step-num">3</span><div class="step-body"><strong>Aquisição paga por intenção técnica</strong><p>LinkedIn Ads segmentado por cargo (engenharia clínica, gestão de equipamentos, diretoria hospitalar) + Google Ads em busca técnica ("manutenção preventiva ressonância magnética", "empresa de manutenção de tomógrafo"), expandindo a cobertura geográfica além de Goiás.</p></div></li>
+        <li><span class="step-num">4</span><div class="step-body"><strong>Funil de contrato, não de venda única</strong><p>Lead técnico → diagnóstico/visita técnica gratuita → proposta de contrato customizado (preventiva mensal ou anual) → contrato assinado → upsell (corretiva emergencial, bobinas de RF, Cinema Vision).</p></div></li>
+        <li><span class="step-num">5</span><div class="step-body"><strong>SLA como argumento de retenção</strong><p>O atendimento corretivo 24/7 vira o gatilho de renovação: cada chamado resolvido rápido é prova viva de que o contrato vale a pena — documentado e usado na hora de renovar.</p></div></li>
+        <li><span class="step-num">6</span><div class="step-body"><strong>Expansão dentro da mesma rede hospitalar</strong><p>Um hospital com contrato ativo é a porta de entrada pra outras unidades da mesma rede e pra outros equipamentos (RM → TC → sistemas criogênicos). A recompra aqui é expansão de escopo, não repetição de compra.</p></div></li>
+      </ol>
+
+      <div class="metrics-track">
+        <div class="mt-label">Métricas que eu acompanharia desde o mês 1</div>
+        <div class="metric-pills">
+          <span class="metric-pill">Custo por lead técnico qualificado</span>
+          <span class="metric-pill">Conversão diagnóstico → contrato</span>
+          <span class="metric-pill">Tempo médio de resposta (SLA)</span>
+          <span class="metric-pill">Taxa de renovação de contrato</span>
+          <span class="metric-pill">Ticket médio por contrato</span>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
 
