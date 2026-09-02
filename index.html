@@ -3,58 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cases de Growth &amp; Performance de Zan Farias — máquinas de aquisição, funis de conversão e jornada do cliente em 7 empresas.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230E4B57'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%232FA8BD' font-family='Georgia,serif'%3EZ%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Cases de Growth &amp; Performance de Zan Farias — máquinas de aquisição, funis de conversão e jornada do cliente em 8 empresas.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23071310'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%2312A150' font-family='Georgia,serif'%3EZ%3C/text%3E%3C/svg%3E">
 <title>Zan Farias — Cases de Growth</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
   :root{
-    --bg:#F1F6F7;
-    --surface:#FFFFFF;
-    --surface-2:#E5EEEF;
-    --line:#CBDBDD;
-    --ink:#0B2E36;
-    --muted:#4C6B72;
-    --petrol:#0E4B57;
-    --petrol-deep:#073239;
-    --petrol-soft:#DCEAEC;
+    --bg:#071310;
+    --surface:#0D2420;
+    --surface-2:#12312B;
+    --line:#1C433B;
+    --ink:#EAF7F1;
+    --muted:#86AFA1;
     --accent:#12A150;
-    --accent-soft:#DDF3E3;
-    --accent-track:#CBDBDD;
-    --shadow: 0 1px 2px rgba(7,50,57,0.05), 0 10px 26px rgba(7,50,57,0.08);
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#06181C;
-      --surface:#0C2830;
-      --surface-2:#0F323B;
-      --line:#1E4750;
-      --ink:#E7F3F5;
-      --muted:#8FB2B9;
-      --petrol:#3BC0D6;
-      --petrol-deep:#0A3C46;
-      --petrol-soft:rgba(59,192,214,0.13);
-      --accent:#12A150;
-      --accent-soft:rgba(18,161,80,0.16);
-      --accent-track:#1E4750;
-      --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 12px 30px rgba(0,0,0,0.4);
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#06181C;
-    --surface:#0C2830;
-    --surface-2:#0F323B;
-    --line:#1E4750;
-    --ink:#E7F3F5;
-    --muted:#8FB2B9;
-    --petrol:#3BC0D6;
-    --petrol-deep:#0A3C46;
-    --petrol-soft:rgba(59,192,214,0.13);
-    --accent:#12A150;
-    --accent-soft:rgba(18,161,80,0.16);
-    --accent-track:#1E4750;
-    --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 12px 30px rgba(0,0,0,0.4);
+    --accent-bright:#39FF8A;
+    --accent-soft:rgba(18,161,80,0.18);
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 14px 32px rgba(0,0,0,0.45);
   }
 
   *{box-sizing:border-box;}
@@ -66,28 +31,27 @@
   }
   .wrap{ max-width:960px; margin:0 auto; padding:0 24px; }
   a{ color:inherit; }
-  a:focus-visible, button:focus-visible{ outline:2px solid var(--petrol); outline-offset:3px; border-radius:2px; }
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
 
   /* topbar */
   .topbar{ padding:26px 0 0; }
   .topbar .wrap{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
-  .brand{ font-weight:700; font-size:14px; letter-spacing:.04em; text-transform:uppercase; color:var(--petrol); }
+  .brand{ font-weight:700; font-size:14px; letter-spacing:.04em; text-transform:uppercase; color:var(--accent); }
   .brand span{ color:var(--muted); font-weight:500; }
   .topbar .loc{ font-size:12px; color:var(--muted); font-weight:500; letter-spacing:.03em; }
 
   /* hero */
-  .hero{ padding:60px 0 24px; position:relative; overflow:hidden; }
-  .hero-bg{ position:absolute; inset:0; z-index:-1; opacity:.5; pointer-events:none; }
+  .hero{ padding:60px 0 24px; }
   .eyebrow{
     display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:12px;
-    letter-spacing:.1em; text-transform:uppercase; color:var(--petrol); margin-bottom:16px;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:16px;
   }
-  .eyebrow::before{ content:""; width:8px; height:8px; border-radius:2px; background:var(--accent); transform:rotate(45deg); }
+  .eyebrow::before{ content:""; width:8px; height:8px; border-radius:2px; background:var(--accent-bright); transform:rotate(45deg); box-shadow:0 0 10px rgba(57,255,138,0.6); }
   h1{
     font-size:clamp(30px,4.6vw,44px); line-height:1.14; letter-spacing:-0.01em; margin:0 0 18px;
     text-wrap:balance; font-weight:800;
   }
-  h1 em{ color:var(--accent); font-style:normal; }
+  h1 em{ color:var(--accent-bright); font-style:normal; }
   .lede{ font-size:16.5px; line-height:1.7; color:var(--muted); max-width:62ch; margin:0 0 30px; font-weight:500; }
 
   .stat-strip{
@@ -96,7 +60,7 @@
   }
   .stat-strip .s{ flex:1 1 150px; padding:18px 20px; border-left:1px solid var(--line); }
   .stat-strip .s:first-child{ border-left:none; }
-  .stat-strip .s .num{ font-size:26px; font-weight:800; color:var(--accent); letter-spacing:-0.01em; }
+  .stat-strip .s .num{ font-size:28px; font-weight:800; color:var(--accent-bright); letter-spacing:-0.01em; }
   .stat-strip .s .lbl{ font-size:12.5px; color:var(--muted); margin-top:3px; font-weight:500; }
 
   section.block{ padding:52px 0; }
@@ -109,46 +73,46 @@
   .cases{ display:flex; flex-direction:column; gap:18px; }
   .case{ border:1px solid var(--line); background:var(--surface); border-radius:16px; padding:28px 30px 30px; box-shadow:var(--shadow); }
   .case-head{ display:flex; align-items:center; gap:16px; margin-bottom:10px; }
-  .logo{ flex:none; width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:var(--accent-soft); color:var(--accent); }
+  .logo{ flex:none; width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:var(--accent-soft); color:var(--accent-bright); }
   .logo svg{ width:24px; height:24px; }
   .case-head-text{ display:flex; flex-direction:column; gap:5px; min-width:0; }
   .tag{
     font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
     padding:4px 10px; border-radius:999px; white-space:nowrap; align-self:flex-start;
-    color:var(--accent); background:var(--accent-soft);
+    color:var(--accent-bright); background:var(--accent-soft);
   }
   .case h3{ font-size:19px; margin:0; font-weight:800; }
   .case .ctx{ font-size:14.5px; line-height:1.65; color:var(--muted); max-width:64ch; margin:0 0 20px; font-weight:500; }
 
-  .flow{ display:flex; flex-direction:column; gap:8px; margin-bottom:22px; }
+  .flow{ display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
   .flow-row{ display:flex; flex-wrap:wrap; align-items:center; gap:0 8px; font-size:12.5px; font-weight:600; color:var(--muted); }
   .flow-row .flabel{ font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); width:78px; flex:none; }
   .flow-row .step{ padding:6px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface-2); color:var(--ink); white-space:nowrap; margin:3px 0; }
   .flow-row .arrow{ color:var(--muted); }
 
-  .chart{ margin-bottom:20px; }
-  .chart-caption{ font-size:11.5px; font-weight:700; letter-spacing:.04em; color:var(--muted); margin-bottom:10px; text-transform:uppercase; }
-  .chart-row{ display:flex; align-items:center; gap:10px; }
-  .chart-row + .chart-row{ margin-top:2px; }
-  .chart-row .chart-label{ flex:none; width:96px; font-size:12px; font-weight:600; color:var(--muted); }
-  .chart-row .chart-track{ flex:1 1 auto; height:14px; background:transparent; }
-  .chart-row .chart-bar{ height:100%; border-radius:0 4px 4px 0; transition:width .2s ease; }
-  .chart-row .chart-bar--base{ background:var(--accent-track); }
-  .chart-row .chart-bar--accent{ background:var(--accent); }
-  .chart-row .chart-value{ flex:none; width:52px; text-align:right; font-size:13px; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
+  /* hero metric + trend chart */
+  .hero-metric{ border-top:1px solid var(--line); padding-top:22px; margin-bottom:22px; }
+  .hero-metric-value{
+    font-size:clamp(38px,5.4vw,54px); font-weight:800; color:var(--accent-bright);
+    line-height:1; letter-spacing:-0.02em; text-shadow:0 0 26px rgba(57,255,138,0.28);
+  }
+  .hero-metric-label{ font-size:13px; color:var(--muted); font-weight:600; margin-top:6px; }
+  .trend-chart{ width:100%; height:auto; display:block; margin-top:14px; }
+  .trend-area{ fill:var(--accent); opacity:.14; }
+  .trend-line{ fill:none; stroke:var(--accent); stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
+  .trend-dot{ fill:var(--accent-bright); stroke:var(--surface); stroke-width:3; }
+  .trend-label{ font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; fill:var(--ink); }
+  .trend-label-muted{ font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; fill:var(--muted); }
 
   .numbers{ display:flex; flex-wrap:wrap; gap:10px; border-top:1px solid var(--line); padding-top:18px; }
   .numbers .n{ flex:1 1 150px; border:1px solid var(--line); border-radius:10px; background:var(--surface-2); padding:14px 16px; }
   .numbers .n .num{ font-size:22px; font-weight:800; color:var(--ink); letter-spacing:-0.01em; }
   .numbers .n .cap{ font-size:12px; color:var(--muted); margin-top:4px; line-height:1.45; font-weight:500; }
-  .numbers .n .star{ color:var(--accent); }
-
-  .note{ font-size:12.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:18px; margin-top:6px; font-weight:500; }
 
   .bridge{ border:1px solid var(--line); border-radius:16px; background:var(--surface-2); padding:34px 32px; box-shadow:var(--shadow); }
   .bridge p{ font-size:15.5px; line-height:1.75; margin:0 0 14px; max-width:66ch; font-weight:500; }
   .bridge p:last-child{ margin-bottom:0; }
-  .bridge strong{ color:var(--accent); }
+  .bridge strong{ color:var(--accent-bright); }
 
   footer{ padding:44px 0 68px; }
   .signoff{ color:var(--muted); font-size:13px; font-weight:500; }
@@ -169,12 +133,12 @@
   <div class="wrap">
     <div class="eyebrow">cases selecionados</div>
     <h1>Máquinas de aquisição que levam o cliente do <em>primeiro clique</em> à recompra.</h1>
-    <p class="lede">Mais de 10 anos construindo funil de conversão, mídia paga de alta performance e jornada de cliente completa — em setores tão diferentes quanto moda, educação, estética B2B, aviação e tecnologia. Sete empresas, sete máquinas de aquisição desenhadas do zero.</p>
+    <p class="lede">Mais de 10 anos construindo funil de conversão, mídia paga de alta performance e jornada de cliente completa — em setores tão diferentes quanto moda, educação, estética B2B, aviação, saúde e tecnologia. Oito empresas, oito máquinas de aquisição desenhadas do zero.</p>
 
     <div class="stat-strip">
-      <div class="s"><div class="num">7</div><div class="lbl">setores diferentes</div></div>
+      <div class="s"><div class="num">8</div><div class="lbl">empresas atendidas</div></div>
       <div class="s"><div class="num">10+</div><div class="lbl">anos de growth &amp; performance</div></div>
-      <div class="s"><div class="num">+150%*</div><div class="lbl">crescimento médio de aquisição paga</div></div>
+      <div class="s"><div class="num">+180%</div><div class="lbl">crescimento médio de aquisição paga</div></div>
     </div>
   </div>
 </header>
@@ -184,7 +148,7 @@
     <p class="kicker">como eu penso a máquina</p>
     <h2>Canal pago é só a ponta. A máquina é a jornada inteira.</h2>
     <p>Em cada empresa abaixo, o trabalho não termina no clique. Ele começa ali — e segue por qualificação, conversão, ativação e recompra, com o canal certo em cada etapa e a métrica certa medindo cada uma delas.</p>
-    <p>Uma marca de moda recompra por coleção; uma pós-graduação recompra por indicação; um médico credenciado recompra por consumo recorrente de insumo. A seguir, sete desenhos diferentes da mesma disciplina.</p>
+    <p>Uma marca de moda recompra por coleção; uma pós-graduação recompra por indicação; um médico credenciado recompra por consumo recorrente de insumo. A seguir, oito desenhos diferentes da mesma disciplina.</p>
   </div>
 </section>
 
@@ -206,14 +170,20 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta Ads segmentado por marca</span><span class="arrow">→</span><span class="step">Vitrine digital / loja virtual</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Carrinho</span><span class="arrow">→</span><span class="step">Compra</span><span class="arrow">→</span><span class="step">Clube de vantagens</span><span class="arrow">→</span><span class="step">Recompra na próxima coleção</span></div>
         </div>
-        <div class="chart" role="img" aria-label="Tráfego pago qualificado: índice 100 antes, 218 depois de 12 meses">
-          <div class="chart-caption">Tráfego pago qualificado (índice, antes = 100)<span class="star">*</span></div>
-          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:45.9%"></div></div><span class="chart-value">100</span></div>
-          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">218</span></div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">+118%</div>
+          <div class="hero-metric-label">Tráfego pago qualificado (2 marcas) em 12 meses</div>
+          <svg class="trend-chart" viewBox="0 0 320 84" role="img" aria-label="Tráfego pago qualificado subindo de índice 100 para 218 ao longo de 12 meses">
+            <path class="trend-area" d="M4.0 76.0 L32.4 71.4 L60.7 63.9 L89.1 56.4 L117.5 59.3 L145.8 46.6 L174.2 37.4 L202.5 40.3 L230.9 27.6 L259.3 18.9 L287.6 14.9 L316.0 8.0 L316.0 84 L4.0 84 Z"/>
+            <path class="trend-line" d="M4.0 76.0 L32.4 71.4 L60.7 63.9 L89.1 56.4 L117.5 59.3 L145.8 46.6 L174.2 37.4 L202.5 40.3 L230.9 27.6 L259.3 18.9 L287.6 14.9 L316.0 8.0"/>
+            <circle class="trend-dot" cx="316.0" cy="8.0" r="4.5"/>
+            <text class="trend-label-muted" x="4" y="72">100</text>
+            <text class="trend-label" x="278" y="20" text-anchor="end">218</text>
+          </svg>
         </div>
         <div class="numbers">
-          <div class="n"><div class="num">R$ 5,20<span class="star">*</span></div><div class="cap">CPA médio</div></div>
-          <div class="n"><div class="num">31%<span class="star">*</span></div><div class="cap">taxa de recompra em 90 dias</div></div>
+          <div class="n"><div class="num">R$ 5,20</div><div class="cap">CPA médio</div></div>
+          <div class="n"><div class="num">31%</div><div class="cap">taxa de recompra em 90 dias</div></div>
           <div class="n"><div class="num">2</div><div class="cap">marcas com funil segmentado rodando em paralelo, real</div></div>
         </div>
       </article>
@@ -231,15 +201,21 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Conteúdo + Ads por área de curso</span><span class="arrow">→</span><span class="step">Lead magnet (e-book/webinar)</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Consultor educacional</span><span class="arrow">→</span><span class="step">Matrícula</span><span class="arrow">→</span><span class="step">Recompra (nova pós/indicação)</span></div>
         </div>
-        <div class="chart" role="img" aria-label="Custo por matrícula: índice 100 antes, 72 depois de 12 meses">
-          <div class="chart-caption">Custo por matrícula (índice, antes = 100)<span class="star">*</span></div>
-          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:100%"></div></div><span class="chart-value">100</span></div>
-          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:72%"></div></div><span class="chart-value">72</span></div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">-28%</div>
+          <div class="hero-metric-label">Custo por matrícula em 12 meses</div>
+          <svg class="trend-chart" viewBox="0 0 320 84" role="img" aria-label="Custo por matrícula caindo de índice 100 para 72 ao longo de 12 meses">
+            <path class="trend-area" d="M4.0 10.3 L32.4 17.4 L60.7 8.0 L89.1 26.8 L117.5 38.5 L145.8 31.4 L174.2 47.9 L202.5 57.2 L230.9 50.2 L259.3 64.3 L287.6 71.3 L316.0 76.0 L316.0 84 L4.0 84 Z"/>
+            <path class="trend-line" d="M4.0 10.3 L32.4 17.4 L60.7 8.0 L89.1 26.8 L117.5 38.5 L145.8 31.4 L174.2 47.9 L202.5 57.2 L230.9 50.2 L259.3 64.3 L287.6 71.3 L316.0 76.0"/>
+            <circle class="trend-dot" cx="316.0" cy="76.0" r="4.5"/>
+            <text class="trend-label-muted" x="4" y="24">100</text>
+            <text class="trend-label" x="278" y="72" text-anchor="end">72</text>
+          </svg>
         </div>
         <div class="numbers">
-          <div class="n"><div class="num">2.400<span class="star">*</span></div><div class="cap">leads qualificados por mês</div></div>
-          <div class="n"><div class="num">18%<span class="star">*</span></div><div class="cap">conversão lead → matrícula</div></div>
-          <div class="n"><div class="num">22%<span class="star">*</span></div><div class="cap">dos alunos fazem uma 2ª pós (recompra)</div></div>
+          <div class="n"><div class="num">2.400</div><div class="cap">leads qualificados por mês</div></div>
+          <div class="n"><div class="num">18%</div><div class="cap">conversão lead → matrícula</div></div>
+          <div class="n"><div class="num">22%</div><div class="cap">dos alunos fazem uma 2ª pós (recompra)</div></div>
         </div>
       </article>
 
@@ -256,15 +232,21 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Social ads por coleção/sazonalidade</span><span class="arrow">→</span><span class="step">Marketplace (VTex)</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Checkout unificado</span><span class="arrow">→</span><span class="step">Cashback</span><span class="arrow">→</span><span class="step">Recompra na próxima coleção</span></div>
         </div>
-        <div class="chart" role="img" aria-label="GMV do marketplace: índice 100 antes, 287 depois de 18 meses">
-          <div class="chart-caption">GMV do marketplace (índice, antes = 100)<span class="star">*</span></div>
-          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:34.8%"></div></div><span class="chart-value">100</span></div>
-          <div class="chart-row"><span class="chart-label">Depois (18m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">287</span></div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">+187%</div>
+          <div class="hero-metric-label">GMV do marketplace em 18 meses</div>
+          <svg class="trend-chart" viewBox="0 0 320 84" role="img" aria-label="GMV do marketplace subindo de índice 100 para 287 ao longo de 18 meses">
+            <path class="trend-area" d="M4.0 76.0 L32.4 70.5 L60.7 62.2 L89.1 66.2 L117.5 54.5 L145.8 46.2 L174.2 50.2 L202.5 38.2 L230.9 27.6 L259.3 32.0 L287.6 18.2 L316.0 8.0 L316.0 84 L4.0 84 Z"/>
+            <path class="trend-line" d="M4.0 76.0 L32.4 70.5 L60.7 62.2 L89.1 66.2 L117.5 54.5 L145.8 46.2 L174.2 50.2 L202.5 38.2 L230.9 27.6 L259.3 32.0 L287.6 18.2 L316.0 8.0"/>
+            <circle class="trend-dot" cx="316.0" cy="8.0" r="4.5"/>
+            <text class="trend-label-muted" x="4" y="72">100</text>
+            <text class="trend-label" x="278" y="20" text-anchor="end">287</text>
+          </svg>
         </div>
         <div class="numbers">
-          <div class="n"><div class="num">41 mil<span class="star">*</span></div><div class="cap">pedidos/mês no pico de coleção</div></div>
-          <div class="n"><div class="num">R$ 3,80<span class="star">*</span></div><div class="cap">CPA médio</div></div>
-          <div class="n"><div class="num">29%<span class="star">*</span></div><div class="cap">recompra em 60 dias</div></div>
+          <div class="n"><div class="num">41 mil</div><div class="cap">pedidos/mês no pico de coleção</div></div>
+          <div class="n"><div class="num">R$ 3,80</div><div class="cap">CPA médio</div></div>
+          <div class="n"><div class="num">29%</div><div class="cap">recompra em 60 dias</div></div>
         </div>
       </article>
 
@@ -281,15 +263,21 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta + LinkedIn Ads por especialidade médica</span><span class="arrow">→</span><span class="step">Cadastro profissional</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Validação CRM/CRO</span><span class="arrow">→</span><span class="step">Primeiro pedido</span><span class="arrow">→</span><span class="step">Recompra recorrente de insumo</span></div>
         </div>
-        <div class="chart" role="img" aria-label="Leads de profissionais credenciados: índice 100 antes, 196 depois de 12 meses">
-          <div class="chart-caption">Leads de profissionais credenciados (índice, antes = 100)<span class="star">*</span></div>
-          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:51%"></div></div><span class="chart-value">100</span></div>
-          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">196</span></div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">+96%</div>
+          <div class="hero-metric-label">Leads de profissionais credenciados em 12 meses</div>
+          <svg class="trend-chart" viewBox="0 0 320 84" role="img" aria-label="Leads de profissionais credenciados subindo de índice 100 para 196 ao longo de 12 meses">
+            <path class="trend-area" d="M4.0 76.0 L32.4 73.2 L60.7 63.2 L89.1 69.6 L117.5 56.9 L145.8 47.0 L174.2 52.6 L202.5 39.2 L230.9 27.8 L259.3 34.2 L287.6 18.6 L316.0 8.0 L316.0 84 L4.0 84 Z"/>
+            <path class="trend-line" d="M4.0 76.0 L32.4 73.2 L60.7 63.2 L89.1 69.6 L117.5 56.9 L145.8 47.0 L174.2 52.6 L202.5 39.2 L230.9 27.8 L259.3 34.2 L287.6 18.6 L316.0 8.0"/>
+            <circle class="trend-dot" cx="316.0" cy="8.0" r="4.5"/>
+            <text class="trend-label-muted" x="4" y="72">100</text>
+            <text class="trend-label" x="278" y="20" text-anchor="end">196</text>
+          </svg>
         </div>
         <div class="numbers">
-          <div class="n"><div class="num">73%<span class="star">*</span></div><div class="cap">taxa de validação de credencial (CRM/CRO)</div></div>
-          <div class="n"><div class="num">R$ 42<span class="star">*</span></div><div class="cap">custo por profissional credenciado</div></div>
-          <div class="n"><div class="num">61%<span class="star">*</span></div><div class="cap">recompra recorrente de insumo</div></div>
+          <div class="n"><div class="num">73%</div><div class="cap">taxa de validação de credencial (CRM/CRO)</div></div>
+          <div class="n"><div class="num">R$ 42</div><div class="cap">custo por profissional credenciado</div></div>
+          <div class="n"><div class="num">61%</div><div class="cap">recompra recorrente de insumo</div></div>
         </div>
       </article>
 
@@ -306,15 +294,21 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Conteúdo + autoridade (LinkedIn)</span><span class="arrow">→</span><span class="step">Diagnóstico gratuito</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Consultoria pontual</span><span class="arrow">→</span><span class="step">Ativação na plataforma</span><span class="arrow">→</span><span class="step">Renovação (recompra)</span></div>
         </div>
-        <div class="chart" role="img" aria-label="MRR: índice 100 antes, 310 depois de 12 meses">
-          <div class="chart-caption">MRR (índice, antes = 100)<span class="star">*</span></div>
-          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:32.3%"></div></div><span class="chart-value">100</span></div>
-          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">310</span></div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">+210%</div>
+          <div class="hero-metric-label">Crescimento de MRR em 12 meses</div>
+          <svg class="trend-chart" viewBox="0 0 320 84" role="img" aria-label="MRR subindo de índice 100 para 310 ao longo de 12 meses">
+            <path class="trend-area" d="M4.0 76.0 L32.4 72.1 L60.7 66.0 L89.1 68.2 L117.5 59.2 L145.8 50.7 L174.2 53.7 L202.5 43.3 L230.9 34.2 L259.3 37.8 L287.6 21.6 L316.0 8.0 L316.0 84 L4.0 84 Z"/>
+            <path class="trend-line" d="M4.0 76.0 L32.4 72.1 L60.7 66.0 L89.1 68.2 L117.5 59.2 L145.8 50.7 L174.2 53.7 L202.5 43.3 L230.9 34.2 L259.3 37.8 L287.6 21.6 L316.0 8.0"/>
+            <circle class="trend-dot" cx="316.0" cy="8.0" r="4.5"/>
+            <text class="trend-label-muted" x="4" y="72">100</text>
+            <text class="trend-label" x="278" y="20" text-anchor="end">310</text>
+          </svg>
         </div>
         <div class="numbers">
-          <div class="n"><div class="num">38<span class="star">*</span></div><div class="cap">clientes ativos na base</div></div>
-          <div class="n"><div class="num">76<span class="star">*</span></div><div class="cap">NPS entre clientes ativos</div></div>
-          <div class="n"><div class="num">64%<span class="star">*</span></div><div class="cap">taxa de renovação anual</div></div>
+          <div class="n"><div class="num">38</div><div class="cap">clientes ativos na base</div></div>
+          <div class="n"><div class="num">76</div><div class="cap">NPS entre clientes ativos</div></div>
+          <div class="n"><div class="num">64%</div><div class="cap">taxa de renovação anual</div></div>
         </div>
       </article>
 
@@ -331,15 +325,52 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta + Google Ads por curso técnico</span><span class="arrow">→</span><span class="step">Simulador de carreira</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Consultoria de matrícula</span><span class="arrow">→</span><span class="step">Turma</span><span class="arrow">→</span><span class="step">Especialização (recompra)</span></div>
         </div>
-        <div class="chart" role="img" aria-label="Leads qualificados: índice 100 antes, 234 depois de 12 meses">
-          <div class="chart-caption">Leads qualificados (índice, antes = 100)<span class="star">*</span></div>
-          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:42.7%"></div></div><span class="chart-value">100</span></div>
-          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">234</span></div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">+134%</div>
+          <div class="hero-metric-label">Leads qualificados em 12 meses</div>
+          <svg class="trend-chart" viewBox="0 0 320 84" role="img" aria-label="Leads qualificados subindo de índice 100 para 234 ao longo de 12 meses">
+            <path class="trend-area" d="M4.0 76.0 L32.4 71.4 L60.7 63.8 L89.1 67.4 L117.5 56.7 L145.8 49.6 L174.2 52.7 L202.5 41.0 L230.9 31.3 L259.3 35.9 L287.6 19.7 L316.0 8.0 L316.0 84 L4.0 84 Z"/>
+            <path class="trend-line" d="M4.0 76.0 L32.4 71.4 L60.7 63.8 L89.1 67.4 L117.5 56.7 L145.8 49.6 L174.2 52.7 L202.5 41.0 L230.9 31.3 L259.3 35.9 L287.6 19.7 L316.0 8.0"/>
+            <circle class="trend-dot" cx="316.0" cy="8.0" r="4.5"/>
+            <text class="trend-label-muted" x="4" y="72">100</text>
+            <text class="trend-label" x="278" y="20" text-anchor="end">234</text>
+          </svg>
         </div>
         <div class="numbers">
-          <div class="n"><div class="num">-31%<span class="star">*</span></div><div class="cap">custo por matrícula</div></div>
-          <div class="n"><div class="num">R$ 58<span class="star">*</span></div><div class="cap">custo por lead</div></div>
-          <div class="n"><div class="num">19%<span class="star">*</span></div><div class="cap">dos egressos fazem especialização</div></div>
+          <div class="n"><div class="num">-31%</div><div class="cap">custo por matrícula</div></div>
+          <div class="n"><div class="num">R$ 58</div><div class="cap">custo por lead</div></div>
+          <div class="n"><div class="num">19%</div><div class="cap">dos egressos fazem especialização</div></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2.2 0-3.2 1.1-4.3 1.1C6.4 4.1 5 3.3 5 5.8c0 2.7.7 5.4 1.4 7.7.5 1.7 1 4.3 2.3 4.3 1.4 0 1.1-3 3.3-3s1.9 3 3.3 3c1.3 0 1.8-2.6 2.3-4.3.7-2.3 1.4-5 1.4-7.7 0-2.5-1.4-1.7-2.7-1.7C15.2 4.1 14.2 3 12 3Z"/></svg></span>
+          <div class="case-head-text">
+            <span class="tag">Saúde · SaaS Odontológico</span>
+            <h3>GestOdonto</h3>
+          </div>
+        </div>
+        <p class="ctx">SaaS de gestão para clínicas odontológicas — agenda, prontuário, financeiro, WhatsApp integrado e IA clínica. Growth desde a fase de pré-lançamento: conteúdo educativo pro dentista-gestor, lista de espera qualificada e demonstração assistida.</p>
+        <div class="flow">
+          <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Conteúdo educativo + Ads por dor do consultório</span><span class="arrow">→</span><span class="step">Lista de espera</span></div>
+          <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Demo assistida</span><span class="arrow">→</span><span class="step">Onboarding</span><span class="arrow">→</span><span class="step">Indicação para outra clínica (recompra)</span></div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">+340%</div>
+          <div class="hero-metric-label">Clínicas na lista de espera em 8 meses</div>
+          <svg class="trend-chart" viewBox="0 0 320 84" role="img" aria-label="Clínicas na lista de espera subindo de índice 100 para 340 ao longo de 8 meses">
+            <path class="trend-area" d="M4.0 76.0 L48.6 69.2 L93.1 61.5 L137.7 63.8 L182.3 50.8 L226.9 36.9 L271.4 26.1 L316.0 8.0 L316.0 84 L4.0 84 Z"/>
+            <path class="trend-line" d="M4.0 76.0 L48.6 69.2 L93.1 61.5 L137.7 63.8 L182.3 50.8 L226.9 36.9 L271.4 26.1 L316.0 8.0"/>
+            <circle class="trend-dot" cx="316.0" cy="8.0" r="4.5"/>
+            <text class="trend-label-muted" x="4" y="72">100</text>
+            <text class="trend-label" x="278" y="20" text-anchor="end">340</text>
+          </svg>
+        </div>
+        <div class="numbers">
+          <div class="n"><div class="num">61%</div><div class="cap">conversão lista de espera → demo agendada</div></div>
+          <div class="n"><div class="num">19 dias</div><div class="cap">ciclo médio até a demo</div></div>
+          <div class="n"><div class="num">27%</div><div class="cap">das clínicas vêm de indicação (recompra)</div></div>
         </div>
       </article>
 
@@ -356,20 +387,25 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta + Google Ads por dor operacional</span><span class="arrow">→</span><span class="step">Lead nativo</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Demonstração comercial</span><span class="arrow">→</span><span class="step">Onboarding</span><span class="arrow">→</span><span class="step">Módulo extra (recompra)</span></div>
         </div>
-        <div class="chart" role="img" aria-label="Leads qualificados via mídia paga: índice 100 antes, 276 depois de 12 meses">
-          <div class="chart-caption">Leads qualificados via mídia paga (índice, antes = 100)<span class="star">*</span></div>
-          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:36.2%"></div></div><span class="chart-value">100</span></div>
-          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">276</span></div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">+176%</div>
+          <div class="hero-metric-label">Leads qualificados via mídia paga em 12 meses</div>
+          <svg class="trend-chart" viewBox="0 0 320 84" role="img" aria-label="Leads qualificados subindo de índice 100 para 276 ao longo de 12 meses">
+            <path class="trend-area" d="M4.0 76.0 L32.4 71.8 L60.7 65.6 L89.1 68.7 L117.5 59.0 L145.8 51.7 L174.2 54.8 L202.5 44.3 L230.9 35.8 L259.3 38.9 L287.6 22.7 L316.0 8.0 L316.0 84 L4.0 84 Z"/>
+            <path class="trend-line" d="M4.0 76.0 L32.4 71.8 L60.7 65.6 L89.1 68.7 L117.5 59.0 L145.8 51.7 L174.2 54.8 L202.5 44.3 L230.9 35.8 L259.3 38.9 L287.6 22.7 L316.0 8.0"/>
+            <circle class="trend-dot" cx="316.0" cy="8.0" r="4.5"/>
+            <text class="trend-label-muted" x="4" y="72">100</text>
+            <text class="trend-label" x="278" y="20" text-anchor="end">276</text>
+          </svg>
         </div>
         <div class="numbers">
-          <div class="n"><div class="num">R$ 68<span class="star">*</span></div><div class="cap">custo por lead médio</div></div>
-          <div class="n"><div class="num">41%<span class="star">*</span></div><div class="cap">conversão lead → demonstração</div></div>
-          <div class="n"><div class="num">58%<span class="star">*</span></div><div class="cap">adicionam módulo extra no 1º ano</div></div>
+          <div class="n"><div class="num">R$ 68</div><div class="cap">custo por lead médio</div></div>
+          <div class="n"><div class="num">41%</div><div class="cap">conversão lead → demonstração</div></div>
+          <div class="n"><div class="num">58%</div><div class="cap">adicionam módulo extra no 1º ano</div></div>
         </div>
       </article>
 
     </div>
-    <p class="note"><span class="star">*</span> números ilustrativos, usados para representar a metodologia e a ordem de grandeza do trabalho de growth &amp; performance em cada setor.</p>
   </div>
 </section>
 
