@@ -19,8 +19,9 @@
     --petrol:#0E4B57;
     --petrol-deep:#073239;
     --petrol-soft:#DCEAEC;
-    --accent:#C97A3D;
-    --accent-soft:#F5E6D8;
+    --accent:#12A150;
+    --accent-soft:#DDF3E3;
+    --accent-track:#CBDBDD;
     --shadow: 0 1px 2px rgba(7,50,57,0.05), 0 10px 26px rgba(7,50,57,0.08);
   }
   @media (prefers-color-scheme: dark){
@@ -34,8 +35,9 @@
       --petrol:#3BC0D6;
       --petrol-deep:#0A3C46;
       --petrol-soft:rgba(59,192,214,0.13);
-      --accent:#E39A61;
-      --accent-soft:rgba(227,154,97,0.14);
+      --accent:#12A150;
+      --accent-soft:rgba(18,161,80,0.16);
+      --accent-track:#1E4750;
       --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 12px 30px rgba(0,0,0,0.4);
     }
   }
@@ -49,8 +51,9 @@
     --petrol:#3BC0D6;
     --petrol-deep:#0A3C46;
     --petrol-soft:rgba(59,192,214,0.13);
-    --accent:#E39A61;
-    --accent-soft:rgba(227,154,97,0.14);
+    --accent:#12A150;
+    --accent-soft:rgba(18,161,80,0.16);
+    --accent-track:#1E4750;
     --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 12px 30px rgba(0,0,0,0.4);
   }
 
@@ -84,7 +87,7 @@
     font-size:clamp(30px,4.6vw,44px); line-height:1.14; letter-spacing:-0.01em; margin:0 0 18px;
     text-wrap:balance; font-weight:800;
   }
-  h1 em{ color:var(--petrol); font-style:normal; }
+  h1 em{ color:var(--accent); font-style:normal; }
   .lede{ font-size:16.5px; line-height:1.7; color:var(--muted); max-width:62ch; margin:0 0 30px; font-weight:500; }
 
   .stat-strip{
@@ -93,7 +96,7 @@
   }
   .stat-strip .s{ flex:1 1 150px; padding:18px 20px; border-left:1px solid var(--line); }
   .stat-strip .s:first-child{ border-left:none; }
-  .stat-strip .s .num{ font-size:26px; font-weight:800; color:var(--petrol); letter-spacing:-0.01em; }
+  .stat-strip .s .num{ font-size:26px; font-weight:800; color:var(--accent); letter-spacing:-0.01em; }
   .stat-strip .s .lbl{ font-size:12.5px; color:var(--muted); margin-top:3px; font-weight:500; }
 
   section.block{ padding:52px 0; }
@@ -106,13 +109,13 @@
   .cases{ display:flex; flex-direction:column; gap:18px; }
   .case{ border:1px solid var(--line); background:var(--surface); border-radius:16px; padding:28px 30px 30px; box-shadow:var(--shadow); }
   .case-head{ display:flex; align-items:center; gap:16px; margin-bottom:10px; }
-  .logo{ flex:none; width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:var(--petrol-soft); color:var(--petrol); }
+  .logo{ flex:none; width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:var(--accent-soft); color:var(--accent); }
   .logo svg{ width:24px; height:24px; }
   .case-head-text{ display:flex; flex-direction:column; gap:5px; min-width:0; }
   .tag{
     font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
     padding:4px 10px; border-radius:999px; white-space:nowrap; align-self:flex-start;
-    color:var(--petrol); background:var(--petrol-soft);
+    color:var(--accent); background:var(--accent-soft);
   }
   .case h3{ font-size:19px; margin:0; font-weight:800; }
   .case .ctx{ font-size:14.5px; line-height:1.65; color:var(--muted); max-width:64ch; margin:0 0 20px; font-weight:500; }
@@ -122,6 +125,17 @@
   .flow-row .flabel{ font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); width:78px; flex:none; }
   .flow-row .step{ padding:6px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface-2); color:var(--ink); white-space:nowrap; margin:3px 0; }
   .flow-row .arrow{ color:var(--muted); }
+
+  .chart{ margin-bottom:20px; }
+  .chart-caption{ font-size:11.5px; font-weight:700; letter-spacing:.04em; color:var(--muted); margin-bottom:10px; text-transform:uppercase; }
+  .chart-row{ display:flex; align-items:center; gap:10px; }
+  .chart-row + .chart-row{ margin-top:2px; }
+  .chart-row .chart-label{ flex:none; width:96px; font-size:12px; font-weight:600; color:var(--muted); }
+  .chart-row .chart-track{ flex:1 1 auto; height:14px; background:transparent; }
+  .chart-row .chart-bar{ height:100%; border-radius:0 4px 4px 0; transition:width .2s ease; }
+  .chart-row .chart-bar--base{ background:var(--accent-track); }
+  .chart-row .chart-bar--accent{ background:var(--accent); }
+  .chart-row .chart-value{ flex:none; width:52px; text-align:right; font-size:13px; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; }
 
   .numbers{ display:flex; flex-wrap:wrap; gap:10px; border-top:1px solid var(--line); padding-top:18px; }
   .numbers .n{ flex:1 1 150px; border:1px solid var(--line); border-radius:10px; background:var(--surface-2); padding:14px 16px; }
@@ -134,13 +148,10 @@
   .bridge{ border:1px solid var(--line); border-radius:16px; background:var(--surface-2); padding:34px 32px; box-shadow:var(--shadow); }
   .bridge p{ font-size:15.5px; line-height:1.75; margin:0 0 14px; max-width:66ch; font-weight:500; }
   .bridge p:last-child{ margin-bottom:0; }
-  .bridge strong{ color:var(--petrol); }
+  .bridge strong{ color:var(--accent); }
 
   footer{ padding:44px 0 68px; }
-  .contact{ display:flex; flex-wrap:wrap; gap:10px 26px; margin-top:18px; font-size:13px; font-weight:600; }
-  .contact a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:1px; }
-  .contact a:hover, .contact a:focus-visible{ border-color:var(--petrol); color:var(--petrol); }
-  .signoff{ color:var(--muted); font-size:13px; margin-top:24px; font-weight:500; }
+  .signoff{ color:var(--muted); font-size:13px; font-weight:500; }
 
   @media (max-width:420px){ .case-head{ flex-wrap:wrap; } .flow-row .flabel{ width:auto; } }
 </style>
@@ -195,8 +206,12 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta Ads segmentado por marca</span><span class="arrow">→</span><span class="step">Vitrine digital / loja virtual</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Carrinho</span><span class="arrow">→</span><span class="step">Compra</span><span class="arrow">→</span><span class="step">Clube de vantagens</span><span class="arrow">→</span><span class="step">Recompra na próxima coleção</span></div>
         </div>
+        <div class="chart" role="img" aria-label="Tráfego pago qualificado: índice 100 antes, 218 depois de 12 meses">
+          <div class="chart-caption">Tráfego pago qualificado (índice, antes = 100)<span class="star">*</span></div>
+          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:45.9%"></div></div><span class="chart-value">100</span></div>
+          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">218</span></div>
+        </div>
         <div class="numbers">
-          <div class="n"><div class="num">+118%<span class="star">*</span></div><div class="cap">tráfego pago qualificado (2 marcas) em 12 meses</div></div>
           <div class="n"><div class="num">R$ 5,20<span class="star">*</span></div><div class="cap">CPA médio</div></div>
           <div class="n"><div class="num">31%<span class="star">*</span></div><div class="cap">taxa de recompra em 90 dias</div></div>
           <div class="n"><div class="num">2</div><div class="cap">marcas com funil segmentado rodando em paralelo, real</div></div>
@@ -216,9 +231,13 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Conteúdo + Ads por área de curso</span><span class="arrow">→</span><span class="step">Lead magnet (e-book/webinar)</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Consultor educacional</span><span class="arrow">→</span><span class="step">Matrícula</span><span class="arrow">→</span><span class="step">Recompra (nova pós/indicação)</span></div>
         </div>
+        <div class="chart" role="img" aria-label="Custo por matrícula: índice 100 antes, 72 depois de 12 meses">
+          <div class="chart-caption">Custo por matrícula (índice, antes = 100)<span class="star">*</span></div>
+          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:100%"></div></div><span class="chart-value">100</span></div>
+          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:72%"></div></div><span class="chart-value">72</span></div>
+        </div>
         <div class="numbers">
           <div class="n"><div class="num">2.400<span class="star">*</span></div><div class="cap">leads qualificados por mês</div></div>
-          <div class="n"><div class="num">-28%<span class="star">*</span></div><div class="cap">custo por matrícula em 12 meses</div></div>
           <div class="n"><div class="num">18%<span class="star">*</span></div><div class="cap">conversão lead → matrícula</div></div>
           <div class="n"><div class="num">22%<span class="star">*</span></div><div class="cap">dos alunos fazem uma 2ª pós (recompra)</div></div>
         </div>
@@ -237,8 +256,12 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Social ads por coleção/sazonalidade</span><span class="arrow">→</span><span class="step">Marketplace (VTex)</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Checkout unificado</span><span class="arrow">→</span><span class="step">Cashback</span><span class="arrow">→</span><span class="step">Recompra na próxima coleção</span></div>
         </div>
+        <div class="chart" role="img" aria-label="GMV do marketplace: índice 100 antes, 287 depois de 18 meses">
+          <div class="chart-caption">GMV do marketplace (índice, antes = 100)<span class="star">*</span></div>
+          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:34.8%"></div></div><span class="chart-value">100</span></div>
+          <div class="chart-row"><span class="chart-label">Depois (18m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">287</span></div>
+        </div>
         <div class="numbers">
-          <div class="n"><div class="num">+187%<span class="star">*</span></div><div class="cap">GMV do marketplace em 18 meses</div></div>
           <div class="n"><div class="num">41 mil<span class="star">*</span></div><div class="cap">pedidos/mês no pico de coleção</div></div>
           <div class="n"><div class="num">R$ 3,80<span class="star">*</span></div><div class="cap">CPA médio</div></div>
           <div class="n"><div class="num">29%<span class="star">*</span></div><div class="cap">recompra em 60 dias</div></div>
@@ -258,8 +281,12 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta + LinkedIn Ads por especialidade médica</span><span class="arrow">→</span><span class="step">Cadastro profissional</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Validação CRM/CRO</span><span class="arrow">→</span><span class="step">Primeiro pedido</span><span class="arrow">→</span><span class="step">Recompra recorrente de insumo</span></div>
         </div>
+        <div class="chart" role="img" aria-label="Leads de profissionais credenciados: índice 100 antes, 196 depois de 12 meses">
+          <div class="chart-caption">Leads de profissionais credenciados (índice, antes = 100)<span class="star">*</span></div>
+          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:51%"></div></div><span class="chart-value">100</span></div>
+          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">196</span></div>
+        </div>
         <div class="numbers">
-          <div class="n"><div class="num">+96%<span class="star">*</span></div><div class="cap">leads de profissionais credenciados em 12 meses</div></div>
           <div class="n"><div class="num">73%<span class="star">*</span></div><div class="cap">taxa de validação de credencial (CRM/CRO)</div></div>
           <div class="n"><div class="num">R$ 42<span class="star">*</span></div><div class="cap">custo por profissional credenciado</div></div>
           <div class="n"><div class="num">61%<span class="star">*</span></div><div class="cap">recompra recorrente de insumo</div></div>
@@ -279,8 +306,12 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Conteúdo + autoridade (LinkedIn)</span><span class="arrow">→</span><span class="step">Diagnóstico gratuito</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Consultoria pontual</span><span class="arrow">→</span><span class="step">Ativação na plataforma</span><span class="arrow">→</span><span class="step">Renovação (recompra)</span></div>
         </div>
+        <div class="chart" role="img" aria-label="MRR: índice 100 antes, 310 depois de 12 meses">
+          <div class="chart-caption">MRR (índice, antes = 100)<span class="star">*</span></div>
+          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:32.3%"></div></div><span class="chart-value">100</span></div>
+          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">310</span></div>
+        </div>
         <div class="numbers">
-          <div class="n"><div class="num">+210%<span class="star">*</span></div><div class="cap">crescimento de MRR em 12 meses</div></div>
           <div class="n"><div class="num">38<span class="star">*</span></div><div class="cap">clientes ativos na base</div></div>
           <div class="n"><div class="num">76<span class="star">*</span></div><div class="cap">NPS entre clientes ativos</div></div>
           <div class="n"><div class="num">64%<span class="star">*</span></div><div class="cap">taxa de renovação anual</div></div>
@@ -300,8 +331,12 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta + Google Ads por curso técnico</span><span class="arrow">→</span><span class="step">Simulador de carreira</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Consultoria de matrícula</span><span class="arrow">→</span><span class="step">Turma</span><span class="arrow">→</span><span class="step">Especialização (recompra)</span></div>
         </div>
+        <div class="chart" role="img" aria-label="Leads qualificados: índice 100 antes, 234 depois de 12 meses">
+          <div class="chart-caption">Leads qualificados (índice, antes = 100)<span class="star">*</span></div>
+          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:42.7%"></div></div><span class="chart-value">100</span></div>
+          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">234</span></div>
+        </div>
         <div class="numbers">
-          <div class="n"><div class="num">+134%<span class="star">*</span></div><div class="cap">leads qualificados em 12 meses</div></div>
           <div class="n"><div class="num">-31%<span class="star">*</span></div><div class="cap">custo por matrícula</div></div>
           <div class="n"><div class="num">R$ 58<span class="star">*</span></div><div class="cap">custo por lead</div></div>
           <div class="n"><div class="num">19%<span class="star">*</span></div><div class="cap">dos egressos fazem especialização</div></div>
@@ -321,8 +356,12 @@
           <div class="flow-row"><span class="flabel">Aquisição</span><span class="step">Meta + Google Ads por dor operacional</span><span class="arrow">→</span><span class="step">Lead nativo</span></div>
           <div class="flow-row"><span class="flabel">Jornada</span><span class="step">Demonstração comercial</span><span class="arrow">→</span><span class="step">Onboarding</span><span class="arrow">→</span><span class="step">Módulo extra (recompra)</span></div>
         </div>
+        <div class="chart" role="img" aria-label="Leads qualificados via mídia paga: índice 100 antes, 276 depois de 12 meses">
+          <div class="chart-caption">Leads qualificados via mídia paga (índice, antes = 100)<span class="star">*</span></div>
+          <div class="chart-row"><span class="chart-label">Antes</span><div class="chart-track"><div class="chart-bar chart-bar--base" style="width:36.2%"></div></div><span class="chart-value">100</span></div>
+          <div class="chart-row"><span class="chart-label">Depois (12m)</span><div class="chart-track"><div class="chart-bar chart-bar--accent" style="width:100%"></div></div><span class="chart-value">276</span></div>
+        </div>
         <div class="numbers">
-          <div class="n"><div class="num">+176%<span class="star">*</span></div><div class="cap">leads qualificados via mídia paga em 12 meses</div></div>
           <div class="n"><div class="num">R$ 68<span class="star">*</span></div><div class="cap">custo por lead médio</div></div>
           <div class="n"><div class="num">41%<span class="star">*</span></div><div class="cap">conversão lead → demonstração</div></div>
           <div class="n"><div class="num">58%<span class="star">*</span></div><div class="cap">adicionam módulo extra no 1º ano</div></div>
@@ -346,15 +385,7 @@
 
 <footer>
   <div class="wrap">
-    <p class="kicker">contato</p>
-    <div class="contact">
-      <a href="tel:+5562995778889">(62) 99577-8889</a>
-      <a href="mailto:zanhis@outlook.com">zanhis@outlook.com</a>
-      <a href="https://instagram.com/zan.farias">instagram.com/zan.farias</a>
-      <a href="https://linkedin.com/in/zanfarias">linkedin.com/in/zanfarias</a>
-      <a href="https://behance.net/zanhissilva">behance.net/zanhissilva</a>
-    </div>
-    <p class="signoff">Zan Farias — Growth &amp; Performance · Fundador &amp; CEO da Trax · Sócio-fundador do GestOdonto</p>
+    <p class="signoff">Growth &amp; Performance · máquinas de aquisição, funis de conversão e jornada de cliente completa.</p>
   </div>
 </footer>
 
